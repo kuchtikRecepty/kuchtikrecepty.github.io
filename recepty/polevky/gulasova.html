@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulášová polévka – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Gulášová polévka s mletým masem</h1>
+    <p class="intro">
+      Hutná a kořeněná gulášová polévka připravená z mletého masa, cibule, brambor a papriky. Ideální na zahřátí.
+    </p>
+    <img src="../../img/gulasova.jpg" alt="Gulášová polévka" class="hlavni-obrazek">
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">6 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="5" data-jednotka="lžíce">5 lžic oleje</span></li>
+          <li>1 menší cibule</li>
+          <li><span data-zaklad="4" data-jednotka="lžičky">4 lžičky mleté sladké papriky</span></li>
+          <li><span data-zaklad="200" data-jednotka="g">200 g mletého hovězího masa</span></li>
+          <li><span data-zaklad="1" data-jednotka="l">1 l hovězího vývaru (nebo vody)</span></li>
+          <li><span data-zaklad="3" data-jednotka="ks">3 větší brambory</span></li>
+          <li><span data-zaklad="3" data-jednotka="stroužky">3 velké stroužky česneku</span></li>
+          <li><span data-zaklad="60" data-jednotka="g">60 g hladké mouky nebo hotová jíška</span></li>
+          <li>sůl</li>
+          <li>pepř</li>
+          <li>kmín</li>
+          <li>majoránka</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Na oleji osmažíme dorůžova nadrobno nakrájenou cibuli. Přidáme mleté maso a za stálého míchání restujeme, dokud se oddělí na malé kousky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Vmícháme mletou papriku, krátce zpěníme (nesmí se připálit, jinak zhořkne), a zalijeme vývarem nebo vodou.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Přidáme sůl, pepř a kmín. Vaříme na mírném plameni asi 30 minut.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Brambory nakrájené na kostičky a prolisovaný česnek přidáme do polévky a krátce povaříme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Zahustíme buď suchou jíškou, jíškou z mouky a oleje, nebo moukou rozmíchanou ve vodě. Dobře provaříme, až tuk vystoupí na povrch.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Na závěr přidáme rozemnutou majoránku a polévku finálně dochutíme.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historie vaření – Kuchtík</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: var(--cream);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: var(--dark);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--medium);
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: white;
+      margin-bottom: 0.75rem;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-size: 1rem;
+    }
+    button#vymazatHistoriiBtn {
+  display: block;
+  margin: 1.5rem auto 2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--dark); /* změněno z var(--medium) na var(--dark) */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#vymazatHistoriiBtn:hover {
+  background-color: var(--medium); /* při hover se změní na světlejší */
+}
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem 0;
+      color: var(--medium);
+      font-size: 0.9rem;
+    }
+    nav.nav-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    nav.nav-links a {
+      text-decoration: none;
+      color: var(--medium);
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 25px;
+      border: 2px solid var(--medium);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav.nav-links a.active,
+    nav.nav-links a:hover {
+      background-color: var(--medium);
+      color: var(--cream);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-flex" style="text-align:center; padding: 20px;">
+    <h1>Kuchtík – Historie vaření</h1>
+    <nav class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="historie.html" class="active">Historie</a>
+      <a href="nahodny.html">Náhodný recept</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h2>Co babička vařila za posledních 14 dní</h2>
+  <ul id="historie-list">
+    <!-- Historie se načte sem -->
+  </ul>
+  <button id="vymazatHistoriiBtn">Vymazat historii</button>
+</main>
+
+<footer>
+  &copy; 2025 Kuchtík
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const historieList = document.getElementById("historie-list");
+    const vymazatBtn = document.getElementById("vymazatHistoriiBtn");
+
+    function zobrazHistorii() {
+      historieList.innerHTML = "";
+      let historie = JSON.parse(localStorage.getItem("varenaHistorie")) || {};
+      const dnes = new Date();
+
+      let zaznamy = [];
+
+      for (let i = 0; i < 14; i++) {
+        const datum = new Date(dnes);
+        datum.setDate(dnes.getDate() - i);
+        const datumStr = datum.toISOString().split('T')[0];
+
+        if (historie[datumStr]) {
+          zaznamy.push({ datum: datumStr, jidla: historie[datumStr] });
+        }
+      }
+
+      if (zaznamy.length === 0) {
+        historieList.innerHTML = "<li>Žádná zaznamenaná jídla.</li>";
+        return;
+      }
+
+      zaznamy.forEach(zaznam => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${zaznam.datum}:</strong> ${zaznam.jidla.join(", ")}`;
+        historieList.appendChild(li);
+      });
+    }
+
+    vymazatBtn.addEventListener("click", () => {
+      if (confirm("Opravdu chcete vymazat celou historii?")) {
+        localStorage.removeItem("varenaHistorie");
+        zobrazHistorii();
+      }
+    });
+
+    zobrazHistorii();
+  });
+</script>
+</body>
+</html>

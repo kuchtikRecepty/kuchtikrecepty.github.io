@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moravský vrabec – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Moravský vrabec</h1>
+    <p class="intro">Tradiční český pokrm z pečeného vepřového masa s výpekem, ideální s knedlíkem a dušeným zelím.</p>
+    <img src="../../img/moravskyVrabec.jpg" alt="Moravský vrabec" class="hlavni-obrazek" />
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Suroviny</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">5 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="500" data-jednotka="g vepřového plecka">500 g vepřového plecka</span></li>
+          <li><span data-zaklad="500" data-jednotka="g vepřového bůčku">500 g vepřového bůčku</span></li>
+          <li><span data-zaklad="50" data-jednotka="g sádla">50 g sádla</span></li>
+          <li><span data-zaklad="20" data-jednotka="g hladké mouky">20 g hladké mouky</span></li>
+          <li><span data-zaklad="2" data-jednotka="velké cibule">2 velké cibule</span></li>
+          <li><span data-zaklad="5" data-jednotka="stroužků česneku">5 stroužků česneku</span></li>
+          <li>kmín</li>
+          <li>sůl</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Troubu předehřejeme na 200 °C. Cibuli oloupeme a nakrájíme nadrobno, maso na větší kousky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Na sádle zpěníme cibuli, přidáme maso, rozdrcený česnek, kmín a sůl. Krátce osmahneme, podlijeme trochou vody a zakryjeme poklicí.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Vložíme do trouby a pečeme přikryté asi 40 minut. Poté poklici odstraníme, maso promícháme a přelijeme výpekem.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Pečeme odkryté dalších asi 40 minut, během kterých maso alespoň 2–3× promícháme a podle potřeby podlijeme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Po upečení maso vyjmeme a udržujeme v teple. Výpek zaprášíme moukou, krátce orestujeme, zalijeme trochou vody a povaříme 15 minut.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Maso vrátíme do omáčky, prohřejeme a podáváme.</p>
+          </div>
+        </div>
+
+        <p>Servírujeme s houskovým nebo bramborovým knedlíkem a dušeným zelím či špenátem.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

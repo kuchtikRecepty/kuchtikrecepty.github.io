@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kulajda – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+    <script defer src="../../script.js"></script>
+
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Kulajda</h1>
+    <p class="intro">
+      Tradiční česká polévka s houbami, koprem a vejcem. Krémová, voňavá a dokonale vyvážená chuť, která připomíná české lesy a babiččinu kuchyni.
+    </p>
+    <img src="../../img/kulajda.jpg" alt="Kulajda" class="hlavni-obrazek">
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">6 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="6" data-jednotka="středně velkých brambor">6 středně velkých brambor</span></li>
+          <li><span data-zaklad="1" data-jednotka="větší cibule">1 větší cibule</span></li>
+          <li>lesní houby (nebo žampiony)</li>
+          <li><span data-zaklad="200" data-jednotka="g smetany na vaření 12%">200 g smetany na vaření 12%</span></li>
+          <li>čerstvý kopr</li>
+          <li>sůl</li>
+          <li><span data-zaklad="2" data-jednotka="špetky kmínu">2 špetky kmínu</span></li>
+          <li><span data-zaklad="3" data-jednotka="bobkové listy">3 bobkové listy</span></li>
+          <li><span data-zaklad="2" data-jednotka="lžíce hladké mouky">2 lžíce hladké mouky</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce octa">1 lžíce octa</span></li>
+          <li><span data-zaklad="2" data-jednotka="vejce">2 vejce</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+        
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Do hrnce s vodou (asi 2 litry) vložíme nakrájené oloupané brambory, nadrobno nakrájenou cibuli, nakrájené houby, kmín a bobkové listy. Osolíme a dáme vařit.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Když jsou brambory téměř měkké, zahustíme polévku smetanou, ve které důkladně rozmícháme mouku. Necháme ještě pozvolna vařit, až brambory změknou úplně.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Ke konci varu vmícháme rozkvedlaná vajíčka a drobně nakrájený kopr. Polévku odstavíme a dochutíme octem.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Podáváme s čerstvým chlebem. Pro výraznější chuť můžeme přidat více kopru nebo kapku smetany navrch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

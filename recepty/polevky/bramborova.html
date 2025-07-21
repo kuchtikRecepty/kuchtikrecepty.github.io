@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bramboračka s houbami – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Bramboračka s houbami</h1>
+    <p class="intro">
+      Tradiční česká polévka s bramborami, zeleninou, houbami a voňavou majoránkou. Klasika, která nikdy nezklame.
+    </p>
+    <img src="../../img/bramborova.jpg" alt="Bramboračka" class="hlavni-obrazek">
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">6 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="4" data-jednotka="brambory">4 brambory</span></li>
+          <li><span data-zaklad="1" data-jednotka="větší mrkev">1 větší mrkev</span></li>
+          <li><span data-zaklad="1" data-jednotka="petržel">1 petržel (nebo trochu mražené zeleniny)</span></li>
+          <li><span data-zaklad="50" data-jednotka="g másla">50 g másla</span></li>
+          <li><span data-zaklad="2" data-jednotka="lžíce mouky">2 lžíce hladké mouky</span></li>
+          <li>vývar (dle potřeby)</li>
+          <li>sůl</li>
+          <li>bobkový list</li>
+          <li>česnek (podle chuti)</li>
+          <li>majoránka</li>
+          <li>houby (podle chuti)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Z másla a hladké mouky připravíme světlou jíšku. Odstavíme ji stranou a necháme zchladnout.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Oloupeme brambory a nakrájíme je na kostičky. Mrkev, petržel a houby pokrájíme na menší kousky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Vše vložíme do vývaru, osolíme, přidáme bobkový list a vaříme do změknutí zeleniny.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Přilijeme připravenou jíšku, přidáme prolisovaný česnek a necháme chvíli provařit.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Těsně před koncem vaření přidáme rozemnutou sušenou majoránku a podle chuti dosolíme.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

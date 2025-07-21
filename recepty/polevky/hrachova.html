@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hrachová polévka – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Hrachová polévka</h1>
+    <p class="intro">
+      Hustá a výživná hrachová polévka z vývaru z kostí, s česnekem, majoránkou a smaženými krutony. Tradiční recept jak od babičky.
+    </p>
+    <img src="../../img/hrachova.jpg" alt="Hrachová polévka" class="hlavni-obrazek">
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">1 dávka</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="300" data-jednotka="g hovězích a telecích kostí">300 g hovězích a telecích kostí</span></li>
+          <li>sůl</li>
+          <li>několik zrnek celého pepře</li>
+          <li><span data-zaklad="1" data-jednotka="menší cibule">1 menší cibule</span></li>
+          <li>kousek celeru</li>
+          <li><span data-zaklad="1" data-jednotka="malá mrkev">1 malá mrkev</span></li>
+          <li><span data-zaklad="1" data-jednotka="petržel">1 petržel</span></li>
+          <li><span data-zaklad="200" data-jednotka="g hrachu">200 g hrachu</span></li>
+          <li><span data-zaklad="100" data-jednotka="g sádla">100 g sádla (nebo olej)</span></li>
+          <li><span data-zaklad="80" data-jednotka="g hladké mouky">80 g hladké mouky</span></li>
+          <li>mletý pepř</li>
+          <li>česnek</li>
+          <li>sůl</li>
+          <li>majoránka</li>
+          <li>petrželová nať</li>
+          <li>smažené kostičky z rohlíku nebo žemle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Začneme vařit vývar z kostí v osolené vodě. Průběžně sbíráme pěnu z povrchu.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Přidáme celý pepř, očištěnou kořenovou zeleninu a cibuli. Vaříme do změknutí a poté vývar procedíme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Předem namočený hrách slijeme a v čerstvé vodě uvaříme doměkka. Poté ho rozmixujeme nebo prolisujeme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Ze sádla a mouky připravíme jíšku. Postupně do ní za stálého míchání přiléváme vývar a povaříme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Po cca 30 minutách přidáme prolisovaný hrách, mletý pepř a pokračujeme ve vaření.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Na závěr přidáme rozetřený česnek a majoránku. Dochutíme dle potřeby. Lze přidat i trochu polévkového koření.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">7</span>
+          <div class="step-text">
+            <p>Podáváme s osmaženým rohlíkem nebo žemlí a ozdobíme čerstvou petrželkou.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

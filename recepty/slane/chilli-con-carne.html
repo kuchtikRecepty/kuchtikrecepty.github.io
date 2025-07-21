@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chilli con carne – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Chilli con carne</h1>
+    <p class="intro">
+      Tradiční pikantní mexický pokrm s mletým hovězím masem, rajčaty, červenými fazolemi a trochou čokolády pro hloubku chuti.
+    </p>
+    <img src="../../img/ChilliConCarne.jpg" alt="Chilli con carne" class="hlavni-obrazek" />
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="500" data-jednotka="g mletého hovězího masa">500 g mletého hovězího masa</span></li>
+          <li><span data-zaklad="2" data-jednotka="cibule">2 cibule</span></li>
+          <li>1 konzerva loupaných rajčat</li>
+          <li>1 rajčatový protlak</li>
+          <li>2 konzervy červených fazolí</li>
+          <li><span data-zaklad="2" data-jednotka="stroužky česneku">2 stroužky česneku</span></li>
+          <li>2 čtverečky hořké čokolády</li>
+          <li><span data-zaklad="1" data-jednotka="lžička chilli">1 lžička chilli</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce oregana">1 lžíce oregana</span></li>
+          <li>olej</li>
+          <li>mletý pepř</li>
+          <li>sůl</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step"><span class="step-number">1</span>
+          <div class="step-text">
+            <p>Cibuli nakrájíme nahrubo a osmažíme na oleji dozlatova.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">2</span>
+          <div class="step-text">
+            <p>Přidáme mleté maso, osolíme, opepříme a za stálého míchání rozdrobíme hrudky masa. Opékáme, dokud nezhnědne.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">3</span>
+          <div class="step-text">
+            <p>Přidáme rajčatový protlak, konzervu rajčat i s nálevem, prolisovaný česnek a čokoládu. Vaříme 15–20 minut.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">4</span>
+          <div class="step-text">
+            <p>Přidáme scezené fazole, chilli a oregano. Dochutíme dle potřeby a ještě krátce povaříme.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">5</span>
+          <div class="step-text">
+            <p>Podáváme s rýží, tortillami, chlebem nebo polentou.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

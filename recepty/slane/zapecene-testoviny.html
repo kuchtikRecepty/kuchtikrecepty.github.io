@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zapečené těstoviny se šunkou – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Zapečené těstoviny se šunkou, smetanou a sýrem</h1>
+    <p class="intro">Jednoduché a oblíbené zapečené těstoviny s krémovou smetanovo-vaječnou směsí, šunkou a sýrem.</p>
+    <img src="../../img/zapecenetestoviny.jpg" alt="Zapečené těstoviny se šunkou" class="hlavni-obrazek" />
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Suroviny</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="500" data-jednotka="g těstovin">500 g těstovin</span></li>
+          <li><span data-zaklad="150" data-jednotka="g tvrdého sýra">150 g tvrdého sýra</span></li>
+          <li><span data-zaklad="250" data-jednotka="ml smetany (12%)">250 ml smetany 12%</span></li>
+          <li><span data-zaklad="200" data-jednotka="g šunky">200 g šunky v celku</span></li>
+          <li><span data-zaklad="3" data-jednotka="ks vejce">3 vejce</span></li>
+          <li>sůl</li>
+          <li>máslo na vymazání misky</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step"><span class="step-number">1</span>
+          <div class="step-text">
+            <p>Těstoviny uvaříme v osolené vodě podle návodu na obalu. Mezitím nakrájíme šunku na kostičky a sýr nahrubo nastrouháme.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">2</span>
+          <div class="step-text">
+            <p>Ve smetaně rozšleháme vejce, směs lehce osolíme. Zapékací misku vymažeme máslem.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">3</span>
+          <div class="step-text">
+            <p>Uvařené těstoviny promícháme s nakrájenou šunkou a sýrem, vložíme do zapékací misky a zakryjeme víkem nebo alobalem.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">4</span>
+          <div class="step-text">
+            <p>Dáme péct do trouby předehřáté na 200 °C na 15–20 minut. Poté zalijeme smetanovo-vaječnou směsí a dopečeme odkryté dozlatova.</p>
+          </div>
+        </div>
+
+        <p>Podáváme samotné nebo s čerstvou zeleninou.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Česnečka – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+    <script defer src="../../script.js"></script>
+
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Česnečka</h1>
+    <p class="intro">
+      Tradiční česneková polévka, která skvěle zahřeje a je i skvělým vyprošťovákem.
+    </p>
+    <img src="../../img/cesnekova.jpeg" alt="česmekova" class="hlavni-obrazek">
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="1.5" data-jednotka="paličky česneku">1–2 paličky česneku</span></li>
+          <li><span data-zaklad="4" data-jednotka="ks brambor">4 ks brambor</span></li>
+          <li><span data-zaklad="1" data-jednotka="ks cibule">1 ks cibule</span></li>
+          <li><span data-zaklad="1" data-jednotka="kostka hovězího bujónu">1 kostka hovězího bujónu</span></li>
+          <li>sůl (podle chuti)</li>
+          <li>majoránka (podle chuti)</li>
+          <li>drcený kmín (podle chuti)</li>
+          <li>mletý černý pepř (podle chuti)</li>
+          <li>na ozdobu:</li>
+          <li>sýr</li>
+          <li>chlebové krutony</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+        
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Menší cibuli a česnek očistíme. Cibuli nasekáme najemno, česnek také, nebo jej nakrájíme na plátky či prolisujeme – záleží, jak má kdo rád. Brambory oloupeme a nakrájíme na kostičky.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>V hrnci rozehřejeme sádlo a zesklovatíme cibuli. Přidáme česnek, krátce orestujeme a zalijeme horkou vodou. Přidáme brambory, kostku bujónu (masový nebo zeleninový) a polévku osolíme, opepříme a přidáme drcený kmín.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Česnečku vaříme do změknutí brambor. Ke konci přidáme do česnečky drhnutou majoránku.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Pro silnější česnekový efekt můžeme přidat další 3 stroužky česneku, tentokrát už prolisovaného.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Horkou česnečku lijeme nejlépe do misek a posypeme upečenými kostičkami tvrdšího chleba a nastrouhaným sýrem. Hotovou česnečku se sýrem ihned podáváme.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

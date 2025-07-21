@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Náhodný recept – Kuchtík</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header-flex {
+  max-width: 1200px; /* nebo stejná šířka jako ostatní obsah */
+  margin: 0 auto; /* centrování obsahu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      display: flex;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .header-flex h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+      flex: 1;
+    }
+    nav.nav-links {
+      display: flex;
+      gap: 12px;
+    }
+    nav.nav-links a {
+      background-color: transparent;
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border: 2px solid var(--medium);
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    nav.nav-links a:hover {
+      background-color: var(--medium);
+      color: var(--dark);
+      border-color: var(--light);
+    }
+    nav.nav-links a.active {
+      background-color: var(--light);
+      color: var(--dark);
+      border-color: var(--medium);
+    }
+    header h1{
+        color: white;
+    }
+    h1 {
+      color: var(--medium);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    button {
+      background-color: var(--medium);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--dark);
+    }
+    #vysledek {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    #vysledek a {
+      color: var(--medium);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    #vysledek a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Náhodný recept</h1>
+    <nav class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="historie.html">Historie</a>
+      <a href="nahodny.html" class="active">Náhodný recept</a>
+    </nav>
+  </div>
+</header>
+
+<body>
+
+
+    
+<main>
+  <h1>Náhodný recept z Kuchtíka</h1>
+  <button id="losujBtn">Losuj recept</button>
+
+  <div id="vysledek"></div>
+</main>
+
+<script>
+  document.getElementById('losujBtn').addEventListener('click', () => {
+    fetch('index.html')
+      .then(response => response.text())
+      .then(htmlText => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        const recepty = Array.from(doc.querySelectorAll('.recept-karta'));
+        if (recepty.length === 0) {
+          document.getElementById('vysledek').textContent = 'Žádné recepty nebyly nalezeny.';
+          return;
+        }
+        const nahodny = recepty[Math.floor(Math.random() * recepty.length)];
+        const nazev = nahodny.querySelector('.nazev-receptu a')?.textContent || 'Neznámý recept';
+        const odkaz = nahodny.querySelector('.nazev-receptu a')?.href || '#';
+        document.getElementById('vysledek').innerHTML = `Zkuste recept: <a href="${odkaz}">${nazev}</a>`;
+      })
+      .catch(() => {
+        document.getElementById('vysledek').textContent = 'Nepodařilo se načíst recepty.';
+      });
+  });
+</script>
+
+</body>
+</html>

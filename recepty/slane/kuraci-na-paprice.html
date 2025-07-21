@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuře na paprice – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Kuře na paprice</h1>
+    <p class="intro">Oblíbený pokrm s jemnou paprikovou omáčkou a křehkým kuřecím masem.</p>
+    <img src="../../img/kurecipap.jpg" alt="Kuře na paprice" class="hlavni-obrazek" />
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Suroviny</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="500" data-jednotka="g kuřecího masa">500 g kuřecího masa</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce sladké papriky">1 lžíce sladké papriky</span></li>
+          <li><span data-zaklad="1" data-jednotka="velká cibule">1 velká cibule</span></li>
+          <li>kuřecí vývar</li>
+          <li><span data-zaklad="1.5" data-jednotka="bobkového listu">1–2 bobkové listy</span></li>
+          <li><span data-zaklad="1.5" data-jednotka="lžíce hladké mouky">1–2 lžíce hladké mouky</span></li>
+          <li><span data-zaklad="200" data-jednotka="ml smetany na vaření">200 ml smetany</span></li>
+          <li>sůl</li>
+          <li>mletý pepř</li>
+          <li>olej</li>
+          <li><span data-zaklad="1" data-jednotka="lžička octa">1 lžička octa</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step"><span class="step-number">1</span>
+          <div class="step-text">
+            <p>Cibuli oloupeme a nakrájíme najemno. Maso nakrájíme na větší kousky, osolíme, opepříme a promneme.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">2</span>
+          <div class="step-text">
+            <p>V hrnci rozehřejeme olej, zpěníme cibuli a přidáme maso. Krátce opečeme, zaprášíme paprikou a ihned podlijeme vývarem.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">3</span>
+          <div class="step-text">
+            <p>Přidáme bobkový list a dusíme pod pokličkou doměkka, až se maso začne rozpadat.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">4</span>
+          <div class="step-text">
+            <p>Maso vyjmeme, do omáčky nalijeme polovinu smetany a případně dolijeme vývar. Přivedeme k varu.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">5</span>
+          <div class="step-text">
+            <p>Ve zbytku smetany rozšleháme mouku a za stálého míchání přilijeme do vroucí omáčky. Promícháme, případně rozmixujeme (bobkový list vyjmeme).</p>

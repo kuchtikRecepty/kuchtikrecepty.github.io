@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holandský řízek – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Holandský řízek</h1>
+    <p class="intro">Šťavnatý mletý řízek s eidamem, obalený a dozlatova smažený – ideální s bramborovou kaší.</p>
+    <img src="../../img/holandsky.jpg" alt="Holandský řízek" class="hlavni-obrazek" />
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Suroviny</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">5 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="500" data-jednotka="g mletého vepřového masa">500 g mletého vepřového masa (nejlépe plec)</span></li>
+          <li><span data-zaklad="200" data-jednotka="g strouhaného eidamu">200 g strouhaného eidamu</span></li>
+          <li><span data-zaklad="0.75" data-jednotka="hrnku mléka">0,5–1 hrnek mléka (dle potřeby)</span></li>
+          <li>sůl</li>
+          <li>mletý pepř</li>
+          <li>vejce (na obalení)</li>
+          <li>strouhanka (na obalení)</li>
+          <li>olej na smažení</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step"><span class="step-number">1</span>
+          <div class="step-text">
+            <p>Mleté maso smícháme se studeným mlékem – přiléváme postupně dle potřeby. Přikryjeme a uložíme na noc do lednice.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">2</span>
+          <div class="step-text">
+            <p>Druhý den přidáme nastrouhaný sýr, osolíme, opepříme a důkladně promícháme.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">3</span>
+          <div class="step-text">
+            <p>Navlhčenýma rukama tvoříme placičky. Každý řízek obalíme ve vajíčku a strouhance, poté obalování ještě jednou zopakujeme.</p>
+          </div>
+        </div>
+
+        <div class="step"><span class="step-number">4</span>
+          <div class="step-text">
+            <p>Smažíme z obou stran v dostatečné vrstvě rozehřátého oleje dozlatova.</p>
+          </div>
+        </div>
+
+        <p>Podáváme nejlépe s bramborovou kaší nebo vařenými brambory.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

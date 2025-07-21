@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuchtík</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+    <input type="text" id="searchInput" placeholder="Hledat recept...">
+  </div>
+   <nav class="nav-links">
+    <a href="index.html" class="active">Domů</a>
+    <a href="historie.html">Historie</a>
+          <a href="nahodny.html">Náhodný recept</a>
+   </nav>
+    <button id="toggleFiltryBtn">Skrýt filtry</button>
+
+</header>
+<body>
+
+<div class="filtr">
+
+<div class="filtr-typy">
+   <h3>Typ jídla</h3>
+  <label><input type="radio" name="typ-jidla" value="vse" checked> Vše</label>
+  <label><input type="radio" name="typ-jidla" value="polevka"> Polévky</label>
+  <label><input type="radio" name="typ-jidla" value="slane-jidla"> Slané</label>
+  <label><input type="radio" name="typ-jidla" value="sladka-jidla"> Sladké</label>
+    <label><input type="radio" name="typ-jidla" value="salaty"> Saláty</label>
+  <label><input type="radio" name="typ-jidla" value="dezerty"> Dezerty</label>
+  <label><input type="radio" name="typ-jidla" value="mama"> Mama speciál</label>
+    <p>Mama speciál jsou jídla, s kterými mamka experimentuje</p>
+</div>
+
+
+<h3>Filtrovat podle surovin:</h3>
+
+<div class="filtr-skupina">
+  <h4>Maso</h4>
+  <label><input type="checkbox" class="filtr-surovina" value="kuraci-maso"> Kuřecí</label>
+  <label><input type="checkbox" class="filtr-surovina" value="veprove-maso"> Vepřové</label>
+  <label><input type="checkbox" class="filtr-surovina" value="hovezi-maso"> Hovězí</label>
+  <label><input type="checkbox" class="filtr-surovina" value="mlete-maso"> Mleté</label>
+  <label><input type="checkbox" class="filtr-surovina" value="parek"> Párek/Klobasa</label>
+  <label><input type="checkbox" class="filtr-surovina" value="drstky"> Dršťky</label>
+  <label><input type="checkbox" class="filtr-surovina" value="slanina"> Slanina</label>
+  <label><input type="checkbox" class="filtr-surovina" value="uzene-maso"> Uzené maso</label>
+  <label><input type="checkbox" class="filtr-surovina" value="bez-mase"> Bezmasé </label>
+
+</div>
+
+<div class="filtr-skupina">
+  <h4>Přílohy</h4>
+  <label><input type="checkbox" class="filtr-surovina" value="brambory"> Brambory</label>
+  <label><input type="checkbox" class="filtr-surovina" value="ryze"> Rýže</label>
+  <label><input type="checkbox" class="filtr-surovina" value="testoviny"> Těstoviny</label>
+  <label><input type="checkbox" class="filtr-surovina" value="knedlik"> Knedlík</label>
+  <label><input type="checkbox" class="filtr-surovina" value="rohlik"> Pečivo</label>
+</div>
+
+<div class="filtr-skupina">
+  <h4>Zelenina a luštěniny</h4>
+  <label><input type="checkbox" class="filtr-surovina" value="spenat"> Špenát</label>
+  <label><input type="checkbox" class="filtr-surovina" value="zeli"> Zelí</label>
+  <label><input type="checkbox" class="filtr-surovina" value="hriby"> Hřiby</label>
+  <label><input type="checkbox" class="filtr-surovina" value="rajcata"> Rajčata</label>
+  <label><input type="checkbox" class="filtr-surovina" value="cocka"> Čočka</label>
+  <label><input type="checkbox" class="filtr-surovina" value="hrach"> Hrách</label>
+  <label><input type="checkbox" class="filtr-surovina" value="fazole"> Fazole/Fazolové lusky</label>
+  <label><input type="checkbox" class="filtr-surovina" value="kvetak"> Květák</label>
+  <label><input type="checkbox" class="filtr-surovina" value="repa"> Červená řepa</label>
+  <label><input type="checkbox" class="filtr-surovina" value="okurky"> Okurky</label>
+    <label><input type="checkbox" class="filtr-surovina" value="paprika2">Paprika</label>
+  <label><input type="checkbox" class="filtr-surovina" value="cibule">Cibule</label>
+</div>
+
+<div class="filtr-skupina">
+  <h4>Živočišné produkty</h4>
+  <label><input type="checkbox" class="filtr-surovina" value="mouka"> Mouka</label>
+  <label><input type="checkbox" class="filtr-surovina" value="mleko"> Mléko</label>
+  <label><input type="checkbox" class="filtr-surovina" value="smetana"> Smetana</label>
+  <label><input type="checkbox" class="filtr-surovina" value="syr"> Sýr</label>
+  <label><input type="checkbox" class="filtr-surovina" value="vejce"> Vejce</label>
+</div>
+
+<div class="filtr-skupina">
+  <h4>Koření a přísady</h4>
+  <label><input type="checkbox" class="filtr-surovina" value="paprika">Mletá paprika</label>
+  <label><input type="checkbox" class="filtr-surovina" value="bazalka">Bazalka</label>
+  <label><input type="checkbox" class="filtr-surovina" value="kopr">Kopr</label>
+<label><input type="checkbox" class="filtr-surovina" value="majoranka">Majoránka</label>
+<label><input type="checkbox" class="filtr-surovina" value="ocet">Ocet</label>
+<label><input type="checkbox" class="filtr-surovina" value="horcice">Hořčice</label>
+<label><input type="checkbox" class="filtr-surovina" value="povidla">Povidla</label>
+<label><input type="checkbox" class="filtr-surovina" value="majoneza">Majonéza</label>
+
+</div>
+</div>
+
+
+
+<main>
+<p id="vysledek-count">Zobrazeno receptů: 0</p>
+
+    <section id="recepty-container">
+  <h3>Polévky</h3>    
+<!-- Polévky -->
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="hriby smetana brambory kopr vejce">
+  <div class="img-wrapper">
+    <img src="img/kulajda.jpg" alt="Kulajda">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/kulajda.html">Kulajda</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Hustá krémová polévka s houbami, koprem a vejcem.</p>
+</div>
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="cesnek brambory syr">
+  <div class="img-wrapper">
+    <img src="img/cesnekova.jpeg" alt="Česneková polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/cesnekova.html">Česneková</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Výrazná česnečka, ideální pro zimní dny.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="zelenina brambory">
+  <div class="img-wrapper">
+    <img src="img/zeleninova.jpg" alt="Zeleninová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/zeleninova.html">Zeleninová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Lehká polévka plná čerstvé zeleniny.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="hrach cibule">
+  <div class="img-wrapper">
+    <img src="img/hrachova.jpg" alt="Hrachová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/hrachova.html">Hrachová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Hustá a výživná polévka z hrachu.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="fazole cibule cesnek smetana brambory parek">
+  <div class="img-wrapper">
+    <img src="img/fazolova.jpg" alt="Fazolová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/fazolova.html">Fazolová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Sytá polévka plná bílkovin.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="rajcata cibule bazalka protlak">
+  <div class="img-wrapper">
+    <img src="img/rajska.jpg" alt="Rajská polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/rajska.html">Rajčatová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Oblíbená polévka z čerstvých rajčat.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="hriby brambory smetana">
+  <div class="img-wrapper">
+    <img src="img/hribova.jpg" alt="Houbová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/houbova.html">Houbová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Aromatická houbová polévka.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="spenat vejce smetana brambory">
+  <div class="img-wrapper">
+    <img src="img/spenatova.jpg" alt="Špenátová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/spenatova.html">Špenátová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Zelená polévka plná železa a vitamínů.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="brambory majoranka cesnek">
+  <div class="img-wrapper">
+    <img src="img/bramborova.jpg" alt="Bramborová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/bramborova.html">Bramborová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Klasická česká bramboračka.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="cocka cibule smetana brambory">
+  <div class="img-wrapper">
+    <img src="img/cockova.jpg" alt="Čočková polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/cockova.html">Čočková</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Sytá a zdravá polévka z čočky.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="mlete-maso cibule zelenina paprika brambory">
+  <div class="img-wrapper">
+    <img src="img/gulasova.jpg" alt="Gulášová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/gulasova.html">Gulášová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Výrazná masová polévka s kořením.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="parek cibule brambory paprika">
+  <div class="img-wrapper">
+    <img src="img/frankfurtska.jpg" alt="Frankfurtská polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/frankfurtska.html">Frankfurtská</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Polévka s párkem a brambory.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="brambory ocet mleko ">
+  <div class="img-wrapper">
+    <img src="img/bramborovanakyselo.jpg" alt="Bramborová na kyselo">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/bramborovanakyselo.html">Bramborová na kyselo</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Polévka se zakysanou chutí a kmínem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="kroupy zelenina brambory">
+  <div class="img-wrapper">
+    <img src="img/kroupova.jpg" alt="Kroupová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/kroupova.html">Kroupová</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Polévka z ječných krup s kořenovou zeleninou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="drstky cibule majoranka">
+  <div class="img-wrapper">
+    <img src="img/drstkova.jpg" alt="Dršťková polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/drstkova.html">Dršťková</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tradiční silná polévka z drštěk.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="zeli smetana parek brambory paprika">
+  <div class="img-wrapper">
+    <img src="img/kyseliceN.jpg" alt="Kyselice">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/kyselice.html">Kyselice / Zelná (zelňačka)</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Valašská zelná polévka s klobásou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="kuraci maso testoviny zelenina">
+  <div class="img-wrapper">
+    <img src="img/vyvar.jpg" alt="Slepičí vývar">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/vyvar.html">Slepičí vývar s nudlemi</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Silný vývar s domácími nudlemi.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="zelenina parek brambory repa">
+  <div class="img-wrapper">
+    <img src="img/borscht.jpg" alt="Borscht">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/borscht.html">Borscht</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tradiční ruská polévka z červené řepy</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="smetana brambory fazole paprika">
+  <div class="img-wrapper">
+    <img src="img/fazolkova.jpg" alt="Fazolková polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/fazolkova.html">Fazolková</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Babičina oblíbená polévka z fazolových lusků... Fazolová je přesto lepší :P</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="kopr brambory vejce smetana">
+  <div class="img-wrapper">
+    <img src="img/koprovapolevka.jpg" alt="Koprová polévka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/koprova.html">Koprová polévka</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Krémová polévka s čerstvým koprem a vejcem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="hrasek mrkev celer">
+  <div class="img-wrapper">
+    <img src="img/hraskovapolevka.jpg" alt="Hrášková polévka s kapáním">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/polevky/hraskova.html">Hrášková s kapáním</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Sytá polévka s čerstvým hráškem a kapáním.</p>
+</div>
+
+
+
+
+<h2>Hlavní jídla</h2>
+
+<h3>Slaná</h3>
+<!-- Slaná jídla -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="cocka vejce cibule bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/cockasvejci.jpg" alt="Čočka s vejci">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/cocka-s-vejci.html">Čočka s vejci</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Čočka s vařenými vejci a osmaženou cibulkou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hrach parek"> 
+  <div class="img-wrapper">
+    <img src="img/hrachova-kase.jpg" alt="Hrachová kaše">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/hrachova-kase.html">Hrachová kaše</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Klasická kaše z rozvařeného hrachu.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kuraci-maso veprove-maso brambory ryze"> 
+  <div class="img-wrapper">
+    <img src="img/kuraci-rizek.jpg" alt="Kuřecí řízek s rýží/brambory">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/kuraci-rizek.html">Kuřecí/Vepřový řízek</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Obalovaný kuřecí řízek podávaný s rýží nebo brambory je lepší než vepřový.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="testoviny syr smetana cesnek bazalka bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/spagety-se-syrovou-omackou.jpg" alt="Špagety se syrovou omáčkou">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/spagety-se-syrovou-omackou.html">Špagety se syrovou omáčkou</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Špagety s omáčkou z čerstvého sýra, smetany, česneku a bazalky.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="testoviny mlete-maso rajcata syr protlak"> 
+  <div class="img-wrapper">
+    <img src="img/bolonske-spagety.jpg" alt="Bolonské špagety">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/bolonske.html">Bolonské špagety</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Špagety s masovou rajčatovou omáčkou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso kuraci-maso brambory ryze"> 
+  <div class="img-wrapper">
+    <img src="img/veproveprirodno.jpg" alt="Vepřové plátky na přírodno">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/veprove-platky-na-prirodno.html">Vepřové/Kuřecí plátky na přírodno</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Restované vepřové maso podávané s brambory nebo rýží.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kuraci-maso veprove-maso ryze brambory horcice"> 
+  <div class="img-wrapper">
+    <img src="img/horcicneplatky.jpg" alt="Kuřecí maso s hořčičnou omáčkou">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/kuraci-s-horcicnou-omackou.html">Kuřecí/Vepřové maso s hořčičnou omáčkou</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Restované kuřecí/vepřové maso podávané s brambory nebo rýží.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="brambory slanina syr smetana parek"> 
+  <div class="img-wrapper">
+    <img src="img/francouzskebrambory.jpg" alt="Francouzské brambory">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/francouzske-brambory.html">Francouzské/zapékané brambory</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Brambory zapečené se slaninou, sýrem, smetanou a párkem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="spenat brambory vejce bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/spenat-s-bramborem.jpg" alt="Špenát s bramborem">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/spenat-s-bramborem.html">Špenát s bramborem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Dušený špenát podávaný s vařenými bramborami a vejcem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="mama" data-kategorie="slane-jidla" data-suroviny="fazole bez-mase cesnek rajcata2 cibule ryze "> 
+  <div class="img-wrapper">
+    <img src="img/mexicky.jpg" alt="Mexicky kotlik">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/mexicky.html">Mexický fazolový pikantní kotlík</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">S chilli papričkami, červenou cibulí a s mnohým dalším</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso veprove-maso kuraci-maso ryze parek vejce paprika2 okurky"> 
+  <div class="img-wrapper">
+    <img src="img/zavitky.jpg" alt="Závitky s bramborem/rýží">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/zavitky.html">Závitky s bramborem/rýží</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Masové závitky plněné zeleninou, podávané s brambory nebo rýží.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso veprove-maso smetana zelenina knedlik"> 
+  <div class="img-wrapper">
+    <img src="img/svickova.jpg" alt="Svíčková">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/svickova.html">Svíčková</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Hovězí maso s krémovou zeleninovo-smetanovou omáčkou a knedlíkem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso brambory ryze knedlik"> 
+  <div class="img-wrapper">
+    <img src="img/bratislavska.jpg" alt="Bratislavská plec">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/bratislavska-plec.html">Bratislavská plec</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pečená vepřová plec s omáčkou podávaná s brambory nebo rýží.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso veprove-maso okurky knedlik testoviny"> 
+  <div class="img-wrapper">
+    <img src="img/znojmo.jpg" alt="Znojmo">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/znojmo.html">Znojmo</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Hovězí maso v omáčce s okurkami, podávané s knedlíkem či s těstovinami.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso  veprove-maso mlete-maso brambory cibule paprika"> 
+  <div class="img-wrapper">
+    <img src="img/gulas.jpg" alt="Guláš">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/gulas.html">Hovězí guláš s knedlíkem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Dušené hovězí maso s paprikou a cibulí.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="halusky zeli vejce mouka bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/haluskyzeli.jpg" alt="Halušky se zelím">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/halusky-se-zelim.html">Halušky se zelím</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Bramborové noky podávané s dušeným zelím.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="halusky brynza syr slanina vejce mouka"> 
+  <div class="img-wrapper">
+    <img src="img/haluskyb.jpg" alt="Halušky s brynzou a slaninou">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/halusky-s-brynzou-a-slaninou.html">Halušky s brynzou a se slaninou</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tradiční halušky s brynzou a opečenou slaninou.</p>
+</div>
+
+<!-- 16. Granadýr -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="brambory testoviny mlete-maso"> 
+  <div class="img-wrapper">
+    <img src="img/granadyr.jpg" alt="Granadýr">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/granadyr.html">Granadýr</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Mísa z brambor, těstovin a mletého masa.</p>
+</div>
+
+<!-- 17. Smažený květák s bramborem/rýží -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kvetak vejce mleko brambory ryze bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/smazeny-kvetak.jpg" alt="Smažený květák">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/smazeny-kvetak.html">Smažený květák s bramborem/rýží</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Květák v těstíčku podávaný s bramborem nebo rýží.</p>
+</div>
+
+<!-- 18. Karbanátky -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso cibule vejce ryze brambory"> 
+  <div class="img-wrapper">
+    <img src="img/karbanatky.jpg" alt="Karbanátky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/karbanatky.html">Karbanátky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Mleté maso opečené na pánvi s cibulkou.</p>
+</div>
+
+<!-- 19. Mozeček z květáku -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kvetak cibule vejce brambory bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/mozecek.jpg" alt="Mozeček z květáku">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/mozecek-z-kvetaku.html">Mozeček z květáku</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Dušený květák s cibulkou a vejcem.</p>
+</div>
+
+<!-- 20. Rizoto -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso ryze zelenina"> 
+  <div class="img-wrapper">
+    <img src="img/rizoto.jpg" alt="Rizoto">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/rizoto.html">Rizoto</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Krémové rizoto s masem a zeleninou.</p>
+</div>
+
+<!-- 21. Těstovinový salát -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="testoviny mlete-maso zelenina kuraci-maso"> 
+  <div class="img-wrapper">
+    <img src="img/testovinovysalat.jpg" alt="Těstovinový salát">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/testovinovysalat.html">Těstovinový salát</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Lehký salát s těstovinami, masem a zeleninou.</p>
+</div>
+
+<!-- 22. Knedlíky plněné mletým masem -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso mouka vejce zeli"> 
+  <div class="img-wrapper">
+    <img src="img/knedlikyS.jpg" alt="Knedlíky plněné mletým masem">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/knedliky-plnene-mletym-masem.html">Knedlíky plněné mletým masem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Klasické knedlíky plněné masovou náplní.</p>
+</div>
+
+<!-- 23. Vepřové maso na kmíně s bramborem/rýží -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso brambory ryze"> 
+  <div class="img-wrapper">
+    <img src="img/veproveKmin.jpg" alt="Vepřové maso na kmíně">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/veprove-na-kmine.html">Vepřové maso na kmíně</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pečené vepřové maso podávané s bramborem nebo rýží.</p>
+</div>
+
+<!-- 24. Chilli con carne -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso fazole rajcata ryze brambory"> 
+  <div class="img-wrapper">
+    <img src="img/chilli.jpg" alt="Chilli con carne">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/chilli-con-carne.html">Chilli con carne</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pikantní jídlo s mletým masem a fazolemi.</p>
+</div>
+
+<!-- 25. Domažlické ragú -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso zelenina ryze brambory"> 
+  <div class="img-wrapper">
+    <img src="img/domazlicke.jpg" alt="Domažlické ragú">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/domazlicke-ragu.html">Domažlické ragú</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Husté ragú z hovězího masa a kořenové zeleniny.</p>
+</div>
+
+<!-- 26. Bramboráky -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="brambory mouka vejce bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/bramboraky.jpg" alt="Bramboráky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/bramboraky.html">Bramboráky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Opečené bramborové placky z brambor, mouky a vajec.</p>
+</div>
+
+<!-- 27. Segedínský guláš s knedlíkem -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso veprove-maso zeli knedlik smetana"> 
+  <div class="img-wrapper">
+    <img src="img/segedinsky-gulas.jpg" alt="Segedínský guláš">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/segedinsky-gulas.html">Segedínský guláš s knedlíkem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Guláš z hovězího masa a kysaného zelí, podávaný s knedlíkem.</p>
+</div>
+
+<!-- 28. Plněné papriky s rajskou omáčkou a knedlíkem -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="paprika2 mlete-maso rajcata knedlik"> 
+  <div class="img-wrapper">
+    <img src="img/papriky.jpg" alt="Plněné papriky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/plnene-papriky.html">Plněné papriky s rajskou omáčkou</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Papriky plněné masovou směsí, podávané s rajskou omáčkou a knedlíkem.</p>
+</div>
+
+<!-- 29. Vepřo knedlo zelo -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso zeli knedlik"> 
+  <div class="img-wrapper">
+    <img src="img/veproknedlozelo.jpg" alt="Vepřo knedlo zelo">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/vepro-knedlo-zelo.html">Vepřo knedlo zelo</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tradiční kombinace vepřového masa, knedlíku a zelí.</p>
+</div>
+
+<!-- 30. Moravský vrabec -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso knedlik zeli"> 
+  <div class="img-wrapper">
+    <img src="img/moravsky.jpg" alt="Moravský vrabec">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/moravsky-vrabec.html">Moravský vrabec</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pečené vepřové kousky podávané s knedlíkem a zelím.</p>
+</div>
+
+<!-- 31. Kuřecí na paprice s těstovinou -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kuraci-maso paprika smetana testoviny"> 
+  <div class="img-wrapper">
+    <img src="img/kurecipap.jpg" alt="Kuřecí na paprice">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/kuraci-na-paprice.html">Kuřecí na paprice s těstovinou</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Kuřecí maso v krémové paprikové omáčce podávané s těstovinami.</p>
+</div>
+
+<!-- 32. Smažený sýr s brambory -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="syr brambory bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/smazenysyr.jpg" alt="Smažený sýr">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/smazeny-syr.html">Smažený sýr s brambory</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Klasický smažený sýr podávaný s vařenými bramborami.</p>
+</div>
+
+<!-- 33. Holandský řízek -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso mouka vejce"> 
+  <div class="img-wrapper">
+    <img src="img/holandsky.jpg" alt="Holandský řízek">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/holandsky-rizek.html">Holandský řízek</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Smažený řízek z mletého masa obalený v těstíčku.</p>
+</div>
+
+<!-- 34. Hovězí pečeně s bramborovým knedlíkem -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="hovezi-maso knedlik"> 
+  <div class="img-wrapper">
+    <img src="img/hovezipecene.jpg" alt="Hovězí pečeně">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/hovezi-pecene.html">Hovězí pečeně s bramborovým knedlíkem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pečené hovězí maso podávané s bramborovým knedlíkem.</p>
+</div>
+
+<!-- 35. Zapečené těstoviny se šunkou a sýrem -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="testoviny sunka syr smetana"> 
+  <div class="img-wrapper">
+    <img src="img/zapecenetestoviny.jpg" alt="Zapečené těstoviny">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/zapecene-testoviny.html">Zapečené těstoviny se šunkou a sýrem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Výborné těstoviny zapečené se šunkou, sýrem a smetanou.</p>
+</div>
+
+<!-- 36. Játra s rýží -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="jatra ryze"> 
+  <div class="img-wrapper">
+    <img src="img/jatra.jpg" alt="Játra s rýží">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/jatra-s-ryzi.html">Játra s rýží</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Dušená játra podávaná s rýží.</p>
+</div>
+
+<!-- Langoše -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="vejce syr mleko mouka cesnek bez-mase"> 
+  <div class="img-wrapper">
+    <img src="img/langose.jpg" alt="Langoše">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/langose.html">Langoše</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Osmažené langoše posypané sýrem s kečupem a tatarkou.</p>
+</div>
+
+<!-- Sekaná s bramborovou kaší -->
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso brambory maslo mleko okurky"> 
+  <div class="img-wrapper">
+    <img src="img/sekana.jpg" alt="Sekaná s bramborovou kaší">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/sekanasbramborovoukasi.html">Sekaná s bramborovou kaší</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Sekaná muže být i s bramborem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mouka vejce cukr povidla knedlik uzene-maso">
+  <div class="img-wrapper">
+    <img src="img/povidla.jpg" alt="Povidlová omáčka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/povidlova.html">Povidlová omáčka s uzeným masem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">S uzeným masem a knedlíkem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kuraci-maso veprove-maso testoviny paprika2 ryze brambory">
+  <div class="img-wrapper">
+    <img src="img/pikantni.jpg" alt="Pikantní kuřecí/vepřové nudličky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/pikantni_kure.html">Pikantní nudličky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">S rýží a bramborem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso zelenina ryze brambory">
+  <div class="img-wrapper">
+    <img src="img/raznici.jpg" alt="Vepřové ražniči">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/raznici.html">Vepřové ražniči</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Grilované maso s grilovanou zeleninou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso slanina cibule ryze brambory vejce okurky parek paprika2">
+  <div class="img-wrapper">
+    <img src="img/ptacek.jpg" alt="Španělský ptáček">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/slane/spanelsky_ptacek.html">Španělský ptáček</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Plněné vepřové maso v omáčce.</p>
+</div>
+
+ <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kuraci-maso brambory ryze smetana ryze">
+      <div class="img-wrapper">
+        <img src="img/pecenekure.jpg" alt="Pečené kuře">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/slane-jidla/pecene-kure.html">Pečené kuře</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Pečené kuře s bramborem či s rýží nebo s bramborovou kaší.</p>
+    </div>
+
+    <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="veprove-maso protlak ryze knedlik">
+      <div class="img-wrapper">
+        <img src="img/varenemaso.jpg" alt="Vařené vepřové maso">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/slane-jidla/varene-veprove-maso.html">Vařené vepřové maso s rajskou omáčkou</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Vařené vepřové maso s rajskou omáčkou.</p>
+    </div>
+   <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="kopr vejce smetana knedlik bez-mase">
+      <div class="img-wrapper">
+        <img src="img/koprovaomacka.jpg" alt="Koprová omáčka">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/slane-jidla/koprova-omacka.html">Koprová omáčka s vejci</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Koprová omáčka s knedlíkem a vejcem.</p>
+    </div>
+
+    <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="paprika2 rohlik protlak vejce brambory ryze parek bez-mase">
+      <div class="img-wrapper">
+        <img src="img/leco.jpg" alt="Lečo">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/slane-jidla/leco.html">Lečo</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Paprikový pokrm s rajským protlakem a vejci.</p>
+    </div>
+
+    <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="mlete-maso protlak ryze brambory">
+      <div class="img-wrapper">
+        <img src="img/golubky.jpg" alt="Golubky">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/slane-jidla/golubky.html">Golubky</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Zelné závitky plněné mletým masem.</p>
+    </div>
+
+ <div class="recept-karta" data-kategorie="slane-jidla" data-suroviny="parek brambory ryze vejce mleko">
+      <div class="img-wrapper">
+        <img src="img/dukatky.jpg" alt="Salamové dukátky">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/mama/salamove-dukatky.html">Salamové dukátky s bramborem</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Obalený junior s bramborem/rýží.</p>
+    </div>
+
+
+
+<h3>Saláty</h3>
+<div class="recept-karta" data-kategorie="salaty" data-suroviny="rajcata2 okurky syr">
+  <div class="img-wrapper">
+    <img src="img/sopsky.jpg" alt="Šopský salát">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/salaty/sopsky.html">Šopský salát</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Čerstvá zelenina s balkánským sýrem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="salaty" data-suroviny="okurky cibule kopr">
+  <div class="img-wrapper">
+    <img src="img/okurkovysalat.jpg" alt="Okurkový salát">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/salaty/okurkovy.html">Okurkový salát</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Čerstvý salát z nakládaných okurek.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="salaty" data-suroviny="rajcata2 cibule bazalka">
+  <div class="img-wrapper">
+    <img src="img/rajcatovysalat.jpg" alt="Rajčatový salát">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/salaty/rajcatovy.html">Rajčatový salát</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Čerstvá rajčata s cibulí a bazalkou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="salaty" data-suroviny="brambory cibule majoneza zelenina">
+      <div class="img-wrapper">
+        <img src="img/bramborovysalat.jpg" alt="Bramborový salát">
+        <div class="nazev-receptu">
+          <h2><a href="recepty/salaty/bramborovy-salat.html">Bramborový salát</a></h2>
+        </div>
+      </div>
+      <p class="popis-receptu">Klasický bramborový salát podávaný s uzeným masem či řízkem.</p>
+    </div>
+
+
+
+
+<h3>Sladká</h3>
+<!-- Sladká jídla -->
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="knedliky ovoce tvaroh"> 
+  <div class="img-wrapper">
+    <img src="img/knedliky.jpg" alt="Sladké knedlíky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/knedliky.html">Sladké knedlíky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Knedlíky plněné ovocem nebo tvarohem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="testoviny mak cukr"> 
+  <div class="img-wrapper">
+    <img src="img/testovinyMakem.jpg" alt="Těstoviny s mákem">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/nudle-s-makem.html">Těstoviny s mákem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tradiční těstoviny s mletým mákem a cukrem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="testoviny tvaroh cukr"> 
+  <div class="img-wrapper">
+    <img src="img/testovinytvaroh.jpg" alt="Těstoviny s tvarohem">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/nudle-s-tvarohem.html">Těstoviny s tvarohem</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Sladké těstoviny s tvarohem a cukrem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="livance mouka mleko vejce"> 
+  <div class="img-wrapper">
+    <img src="img/livance.jpg" alt="Lívance">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/livance.html">Lívance</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Nadýchané palačinky z mouky, mléka a vajec.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="palacinky mouka mleko vejce marmelada tvaroh"> 
+  <div class="img-wrapper">
+    <img src="img/palacinky.jpg" alt="Palačinky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/palacinky.html">Palačinky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Tenké palačinky plněné marmeládou nebo tvarohem.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="ryzovy-nakyp ryze ovoce"> 
+  <div class="img-wrapper">
+    <img src="img/ryzovynakyp.jpg" alt="Rýžový nákyp">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/ryzovy-nakyp.html">Rýžový nákyp</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Pečený nákyp z rýže a ovoce.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="zemlovka rohlik jablka mleko"> 
+  <div class="img-wrapper">
+    <img src="img/zemlovka.jpg" alt="Žemlovka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/zemlovka.html">Žemlovka</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Dezert z rohlíků, jablek a mléka.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="sladka-jidla" data-suroviny="dukatove-buchticky mouka mleko vejce krem"> 
+  <div class="img-wrapper">
+    <img src="img/buchticky.jpg" alt="Dukátové buchtičky">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/sladke/dukatove-buchticky.html">Dukátové buchtičky</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Kynuté buchtičky s vanilkovým krémem.</p>
+</div>
+
+
+<h2>Dezerty</h2>
+<!-- Dezerty -->
+<div class="recept-karta" data-kategorie="dezerty" data-suroviny="mouka vejce cukr marmelada"> 
+  <div class="img-wrapper">
+    <img src="img/babovka.jpg" alt="Bábovka">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/dezerty/babovka.html">Bábovka</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Klasická bábovka s marmeládou a čokoládovou polevou.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="dezerty" data-suroviny="listove-testo jablka rozinky"> 
+  <div class="img-wrapper">
+    <img src="img/strudl.jpg" alt="Jablečný štrúdl">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/dezerty/strudl-s-jablky.html">Jablečný štrúdl</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Listové těsto plněné jablky a rozinkami.</p>
+</div>
+
+<div class="recept-karta" data-kategorie="dezerty" data-suroviny="olej mouka vejce cukr"> 
+  <div class="img-wrapper">
+    <img src="img/metrovy.jpg" alt="Metrový dort">
+    <div class="nazev-receptu">
+      <h2><a href="recepty/dezerty/metrovy-dort.html">Metrový dort</a></h2>
+    </div>
+  </div>
+  <p class="popis-receptu">Babičin oblíbený zákusek na Velikonoce.</p>
+</div>
+
+
+</section>
+  </main>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+  // === PŘEPOČET SUROVIN PODLE POČTU PORCÍ ===
+  const minusBtn = document.getElementById('minusBtn');
+  const plusBtn = document.getElementById('plusBtn');
+  const porceLabel = document.getElementById('pocetPorci');
+  const seznam = document.getElementById('seznamSurovin');
+  let aktualniPorce = 6;
+
+  function aktualizujSuroviny() {
+    const polozky = seznam.querySelectorAll('li');
+    polozky.forEach(polozka => {
+      const span = polozka.querySelector('span');
+      if (!span) return;
+
+      const zaklad = span.dataset.zaklad;
+      const jednotka = span.dataset.jednotka;
+
+      if (zaklad && jednotka) {
+        const novaHodnota = (zaklad * aktualniPorce / 6).toFixed(2).replace(/\.0$/, '');
+        span.textContent = `${novaHodnota} ${jednotka}`;
+      }
+    });
+  }
+
+  if (minusBtn && plusBtn && porceLabel && seznam) {
+    minusBtn.addEventListener('click', () => {
+      if (aktualniPorce > 1) {
+        aktualniPorce--;
+        porceLabel.textContent = `${aktualniPorce} porcí`;
+        aktualizujSuroviny();
+      }
+    });
+
+    plusBtn.addEventListener('click', () => {
+      aktualniPorce++;
+      porceLabel.textContent = `${aktualniPorce} porcí`;
+      aktualizujSuroviny();
+    });
+
+    aktualizujSuroviny();
+  }
+
+  // === FILTRACE A ZOBRAZENÍ RECEPTŮ ===
+  const searchInput = document.getElementById("searchInput");
+  const checkboxes = document.querySelectorAll(".filtr-surovina");
+  const typyJidlaRadio = document.querySelectorAll('input[name="typ-jidla"]');
+  const recepty = document.querySelectorAll(".recept-karta");
+  const countBox = document.getElementById("vysledek-count");
+
+   function updateHeadingsVisibility() {
+    // Only target section headings (h1-h3) that are direct children of #recepty-container
+    const headings = document.querySelectorAll('#recepty-container > h1, #recepty-container > h2, #recepty-container > h3');
+    
+    headings.forEach(heading => {
+      let nextElement = heading.nextElementSibling;
+      let hasVisibleRecipes = false;
+      
+      while (nextElement && !nextElement.matches('h1, h2, h3')) {
+        if (nextElement.classList.contains('recept-karta') && 
+            nextElement.style.display !== 'none') {
+          hasVisibleRecipes = true;
+          break;
+        }
+        nextElement = nextElement.nextElementSibling;
+      }
+      
+      heading.style.display = hasVisibleRecipes ? 'block' : 'none';
+    });
+  }
+
+  function filtrujRecepty() {
+    const hledanyText = searchInput?.value.toLowerCase() || '';
+    const vybraneSuroviny = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+    const vybranyTyp = document.querySelector('input[name="typ-jidla"]:checked')?.value || 'vse';
+
+    let pocetViditelnych = 0;
+
+    recepty.forEach(recept => {
+      const nazev = recept.querySelector(".nazev-receptu a")?.textContent.toLowerCase() || '';
+      const popis = recept.querySelector("p")?.textContent.toLowerCase() || '';
+      const suroviny = recept.dataset.suroviny
+        ? recept.dataset.suroviny.split(/\s|,/).filter(s => s.trim() !== "")
+        : [];
+      const kategorie = recept.dataset.kategorie || '';
+
+      const shodaText = nazev.includes(hledanyText) || popis.includes(hledanyText);
+      const shodaSuroviny = vybraneSuroviny.every(s => suroviny.includes(s));
+      const shodaTyp = (vybranyTyp === "vse") || (kategorie === vybranyTyp);
+
+      const zobrazit = shodaText && shodaSuroviny && shodaTyp;
+      recept.style.display = zobrazit ? "block" : "none";
+      if (zobrazit) pocetViditelnych++;
+    });
+
+    if (countBox) {
+      countBox.textContent = `Zobrazeno receptů: ${pocetViditelnych}`;
+    }
+
+    updateHeadingsVisibility();
+  }
+  
+  function filtrujRecepty() {
+    const hledanyText = searchInput?.value.toLowerCase() || '';
+    const vybraneSuroviny = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+    const vybranyTyp = document.querySelector('input[name="typ-jidla"]:checked')?.value || 'vse';
+
+    let pocetViditelnych = 0;
+
+    recepty.forEach(recept => {
+      const nazev = recept.querySelector("h2")?.textContent.toLowerCase() || '';
+      const popis = recept.querySelector("p")?.textContent.toLowerCase() || '';
+      const suroviny = recept.dataset.suroviny
+        ? recept.dataset.suroviny.split(/\s|,/).filter(s => s.trim() !== "")
+        : [];
+      const kategorie = recept.dataset.kategorie || '';
+
+      const shodaText = nazev.includes(hledanyText) || popis.includes(hledanyText);
+      const shodaSuroviny = vybraneSuroviny.every(s => suroviny.includes(s));
+      const shodaTyp = (vybranyTyp === "vse") || (kategorie === vybranyTyp);
+
+      const zobrazit = shodaText && shodaSuroviny && shodaTyp;
+      recept.style.display = zobrazit ? "block" : "none";
+      if (zobrazit) pocetViditelnych++;
+    });
+
+    if (countBox) {
+      countBox.textContent = `Zobrazeno receptů: ${pocetViditelnych}`;
+    }
+
+    updateHeadingsVisibility();
+  }
+
+  // Initialize filters
+  searchInput?.addEventListener("input", filtrujRecepty);
+  checkboxes.forEach(cb => cb.addEventListener("change", filtrujRecepty));
+  typyJidlaRadio.forEach(r => r.addEventListener("change", filtrujRecepty));
+  filtrujRecepty(); // Initial filter
+
+  // === TOGGLE FILTRY ===
+  const toggleBtn = document.getElementById('toggleFiltryBtn');
+  const filtrBox = document.querySelector('.filtr');
+  let filtryViditelne = true;
+
+  toggleBtn?.addEventListener('click', () => {
+    filtryViditelne = !filtryViditelne;
+    if (filtrBox) {
+      filtrBox.style.display = filtryViditelne ? 'flex' : 'none';
+    }
+    toggleBtn.textContent = filtryViditelne ? 'Skrýt filtry' : 'Zobrazit filtry';
+  });
+
+  // === NÁHODNÝ RECEPT ===
+  const nahodnyBtn = document.getElementById("nahodnyReceptBtn");
+  const vysledekBox = document.getElementById("nahodnyVysledek");
+
+  nahodnyBtn?.addEventListener("click", () => {
+    const viditelneRecepty = Array.from(recepty).filter(r => r.style.display !== 'none');
+    if (viditelneRecepty.length > 0) {
+      const vybrany = viditelneRecepty[Math.floor(Math.random() * viditelneRecepty.length)];
+      const nazev = vybrany.querySelector("h2")?.textContent || "Neznámý";
+      vysledekBox.textContent = `Zkuste: ${nazev}`;
+    } else {
+      vysledekBox.textContent = "Žádný recept neodpovídá filtrům.";
+    }
+  });
+});</script>
+
+  <footer>
+    <p>&copy; 2025 Kuchtík</p>
+  </footer>
+</body>
+</html>

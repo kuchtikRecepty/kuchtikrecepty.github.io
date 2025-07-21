@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boršč – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Boršč</h1>
+    <p class="intro">
+      Tradiční ruská polévka s bohatým vývarem a výraznou chutí červené řepy.
+    </p>
+    <img src="../../img/borscht.jpg" alt="Boršč" class="hlavni-obrazek">
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">6 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="2" data-jednotka="stroužky česneku">2 stroužky česneku</span></li>
+          <li><span data-zaklad="200" data-jednotka="g brambor">200 g brambor</span></li>
+          <li><span data-zaklad="100" data-jednotka="g cibule">100 g cibule</span></li>
+          <li><span data-zaklad="100" data-jednotka="g mrkve">100 g mrkve</span></li>
+          <li><span data-zaklad="200" data-jednotka="g zelí">200 g zelí</span></li>
+          <li><span data-zaklad="2" data-jednotka="ks bobkového listu">2 ks bobkového listu</span></li>
+          <li><span data-zaklad="2" data-jednotka="lžíce rajského protlaku">2 lžíce rajského protlaku</span></li>
+          <li><span data-zaklad="300" data-jednotka="g červené řepy">300 g červené řepy</span></li>
+          <li><span data-zaklad="5" data-jednotka="ks celého černého pepře">5 kuliček celého černého pepře</span></li>
+          <li><span data-zaklad="500" data-jednotka="g hovězího s kostí">500 g hovězího s kostí</span></li>
+          <li>sůl (podle chuti)</li>
+          <li>kopr (podle chuti)</li>
+          <li>petržel (podle chuti)</li>
+          <li>mletý černý pepř (podle chuti)</li>
+          <li>olej na smažení (podle potřeby)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+        
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Ingredience jsou uvedeny na hrnec 2 - 2,5 l. Základem je správně uvařený vývar. Hovězí s kostí umyjeme ve studené vodě, vložíme do hrnce, zalijeme studenou vodou a dáme vařit. Po vícenásobném vzkypění stáhneme teplotu, sebereme z vývaru pěnu. Osolíme, pak vaříme na mírném ohni asi 1,5 hodiny. 10 - 15 minut před koncem vaření vývaru přidáme celý pepř a bobkový list.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Z vývaru vyjmeme maso, vývar přecedíme. Maso musí být měkké, rozebereme ho rukama na vlákna asi 2 - 3 cm dlouhé. Kousky masa vložíme zpět do vývaru a přidáme větší teplotu. Když se nechcete s masem dlouho trápit, můžete nakrájet na kostky.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Nakrájíme brambory na kostky 2 x 2 cm a vložíme do vývaru. Zase po vzkypění stáhneme teplotu a necháme vařit asi 15 minut. Zelí nakrájíme na nudličky a také dáme do hrnce a zvětšíme teplotu, znovu teplotu stáhneme, když začne kypět. Necháme tak vařit na mírném ohni.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Zatímco se vaří brambory a zelí, připravíme si ostatní zeleninu. Cibuli nakrájíme na menší kostky, mrkev a červenou řepu oškrábeme a nastrouháme.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Na pánvi osmažíme cibuli dozlatova, pak přidáme mrkev. Necháme trochu osmažit. Pak přidáme nastrouhanou červenou řepu. Ještě trochu vše smažíme. Z hrnce, kde se vaří brambory se zelím, vezmeme asi 2 naběračky vývaru a přidáme ho do pánve. Trochu osolíme, opepříme, přidáme rajský protlak, vše pečlivě promícháme a necháme dusit doměkka.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Po změknutí řepy celou zápravu z pánve dáme do hrnce a zvětšíme oheň. Pozor! Po vzkypění vaříme boršč jen 2 minuty a pak hned vypneme oheň! Přidáme drcený česnek a promícháme.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <span class="step-number">7</span>
+          <div class="step-text">
+            <p>Klasický ruský boršč přikryjeme pokličkou a necháme stát asi 15 minut, až poté podáváme.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

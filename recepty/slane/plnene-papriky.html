@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plněné papriky – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Plněné papriky podle babičky</h1>
+    <p class="intro">Voňavé papriky plněné mletým masem, zapečené s rajčaty a rajským protlakem. Podávané s knedlíkem, rýží nebo těstovinami.</p>
+    <img src="../../img/papriky.jpg" alt="Plněné papriky" class="hlavni-obrazek" />
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">5 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="6" data-jednotka="paprik">6 světle zelených paprik</span></li>
+          <li><span data-zaklad="750" data-jednotka="g mletého masa">750 g mletého masa</span></li>
+          <li><span data-zaklad="1" data-jednotka="velká cibule">1 velká cibule</span></li>
+          <li><span data-zaklad="1" data-jednotka="vejce">1 vejce</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce hořčice">1 lžíce hořčice</span></li>
+          <li><span data-zaklad="3" data-jednotka="stroužky česneku">3 stroužky česneku</span></li>
+          <li>strouhanka (dle potřeby)</li>
+          <li><span data-zaklad="1" data-jednotka="větší rajský protlak">1 větší rajský protlak</span></li>
+          <li><span data-zaklad="4" data-jednotka="větší rajčata">4 větší rajčata</span></li>
+          <li>mletý pepř</li>
+          <li>sůl</li>
+          <li>majoránka (nemusí být)</li>
+          <li>olej</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Mleté maso osolíme a opepříme. Přidáme drobně nakrájenou cibuli, vejce, trochu strouhanky, hořčici, prolisovaný česnek a případně majoránku. Dobře promícháme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Papriky očistíme, odstraníme semínka a naplníme připravenou směsí. Vložíme je do pekáče, zakapeme olejem, potřeme rajským protlakem a posypeme nakrájenými rajčaty.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Pekáč přikryjeme alobalem a vložíme do trouby předehřáté na 190 °C. Po 20 minutách podlijeme trochou vody a opět přikryjeme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Po zhruba hodině pečení odstraníme alobal a necháme dopéct dalších 30 minut, aby papriky získaly barvu.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>V případě potřeby během pečení ještě podlijeme, nebo přidáme další protlak a rajčata pro vytvoření omáčky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Hotové papriky podáváme s knedlíkem, rýží nebo těstovinami a přelijeme výpekem.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

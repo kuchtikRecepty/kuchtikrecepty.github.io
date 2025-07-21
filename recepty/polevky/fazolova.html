@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazolová polévka – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Fazolová polévka s klobásou</h1>
+    <p class="intro">
+      Sytá a voňavá fazolová polévka s bramborami, klobásou, smetanou a česnekem. Ideální pro chladné dny nebo jako hlavní jídlo.
+    </p>
+    <img src="../../img/fazolova.jpg" alt="Fazolová polévka" class="hlavni-obrazek">
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">6 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="250" data-jednotka="g barevných fazolí">250 g barevných fazolí</span></li>
+          <li><span data-zaklad="250" data-jednotka="g brambor">250 g brambor</span></li>
+          <li><span data-zaklad="50" data-jednotka="g cibule">50 g cibule</span></li>
+          <li><span data-zaklad="150" data-jednotka="g klobásy">150 g klobásy</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce oleje">1 lžíce oleje (na orestování klobásky)</span></li>
+          <li><span data-zaklad="4" data-jednotka="stroužky česneku">4 stroužky česneku (nebo více dle chuti)</span></li>
+          <li>3 kuličky nového koření</li>
+          <li>2 bobkové listy</li>
+          <li>čerstvě drcený pepř</li>
+          <li>sůl</li>
+          <li><span data-zaklad="100" data-jednotka="g smetany na vaření 12%">100 g smetany na vaření 12%</span></li>
+          <li>ocet na dochucení (možno vynechat)</li>
+        </ul>
+
+        <h3>Jíška</h3>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="50" data-jednotka="g oleje">50 g oleje</span></li>
+          <li><span data-zaklad="50" data-jednotka="g hladké mouky">50 g hladké mouky</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Fazole přes noc namočíme do vody. Následující den je ve stejné vodě dáme vařit. Přidáme bobkový list a nové koření. Vodu doplníme podle potřeby.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Brambory oloupeme a nakrájíme na kostky. Cibuli nakrájíme nadrobno, česnek prolisujeme, klobásu nakrájíme na kolečka nebo půlkolečka.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Na pánvi osmahneme cibuli na oleji dozlatova, přidáme mouku a připravíme světlou jíšku. Zalijeme studenou vodou a rozšleháme dohladka.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Klobásu krátce orestujeme na lžíci oleje.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Do téměř měkkých fazolí přidáme sůl a brambory. Brambory lze uvařit i zvlášť a přidat později.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Po 5 minutách vaření přidáme jíšku, česnek, pepř a orestovanou klobásu. Vaříme pozvolna, dokud brambory nezměknou. Vodu můžeme přidat dle potřeby.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">7</span>
+          <div class="step-text">
+            <p>Na závěr vmícháme smetanu, dochutíme solí a případně trochou octa. Ocet může každý přidat i individuálně až na talíři.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

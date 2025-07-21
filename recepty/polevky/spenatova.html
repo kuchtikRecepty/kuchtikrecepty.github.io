@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Špenátová polévka – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Špenátová polévka</h1>
+    <p class="intro">
+      Hustá špenátová polévka se smetanou, vejci a křupavou slaninou. Rychlá a výživná večeře nebo oběd.
+    </p>
+    <img src="../../img/spenatova.jpg" alt="Špenátová polévka" class="hlavni-obrazek">
+ <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+ 
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">5 porcí</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="1" data-jednotka="cibule">1 cibule</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce sádla">1 lžíce sádla</span></li>
+          <li><span data-zaklad="1500" data-jednotka="ml vývaru">1,5 l vývaru (vody)</span></li>
+          <li><span data-zaklad="1" data-jednotka="mražený špenát">1 mražený špenát (protlak)</span></li>
+          <li><span data-zaklad="2" data-jednotka="vejce">2 vejce</span></li>
+          <li><span data-zaklad="50" data-jednotka="g slaniny">50 g uzené slaniny</span></li>
+          <li><span data-zaklad="80" data-jednotka="ml smetany">80 ml smetany 12%</span></li>
+          <li>sůl</li>
+          <li>mletý pepř</li>
+          <li>česnek (dle chuti)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Nakrájenou cibuli osmažíme na sádle dozlatova. Poté zalijeme vývarem a přivedeme k varu.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Přidáme povolený špenát, osolíme, opepříme a krátce povaříme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Na pánvi orestujeme nakrájenou slaninu a přidáme ji do polévky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Přidáme utřený česnek podle chuti, vlijeme smetanu a vše necháme krátce provařit.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Za stálého míchání přilijeme rozšlehaná vejce. Jakmile vejce ztuhnou, můžeme podávat.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

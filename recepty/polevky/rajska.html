@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajská polévka – Recept</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="../../script.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Rajská polévka</h1>
+    <p class="intro">
+      Jednoduchá a rychlá rajská polévka s kořením a těstovinami. Oblíbená klasika vhodná pro děti i dospělé.
+    </p>
+    <img src="../../img/rajska.jpg" alt="Rajská polévka" class="hlavni-obrazek">
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="1000" data-jednotka="ml vody">1 litr vody</span></li>
+          <li><span data-zaklad="140" data-jednotka="g rajského protlaku">140 g rajského protlaku</span></li>
+          <li><span data-zaklad="1" data-jednotka="malá cibule">1 malá cibule</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce hladké mouky">1 lžíce hladké mouky</span></li>
+          <li><span data-zaklad="1" data-jednotka="lžíce másla">1 lžíce másla</span></li>
+          <li>1 malý bobkový list</li>
+          <li>1 špetka tymiánu</li>
+          <li>3 kuličky pepře</li>
+          <li>2 kuličky nového koření</li>
+          <li>1 hřebíček</li>
+          <li>sůl</li>
+          <li>petrželka nebo pažitka</li>
+          <li><span data-zaklad="1" data-jednotka="lžíce cukru">1 lžíce cukru (na dochucení)</span></li>
+        </ul>
+
+        <h3>Dále</h3>
+        <ul class="ingredient-list">
+          <li>polévkové těstoviny</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>V hrnci rozehřejeme máslo, přidáme mouku a připravíme světlou jíšku. Tu za stálého prošlehávání zalijeme vodou.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Přidáme rajský protlak, promícháme a přivedeme k varu. Vložíme celou cibuli, sůl a veškeré koření. Vaříme zvolna cca 20 minut.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Vyjmeme cibuli a koření (případně přecedíme), poté přidáme polévkové těstoviny a necháme je provařit.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Na závěr dochutíme solí, cukrem a ozdobíme nasekanou petrželkou nebo pažitkou. Podáváme teplé.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

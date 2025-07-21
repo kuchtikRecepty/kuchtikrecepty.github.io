@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segedínský guláš – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Segedínský guláš</h1>
+    <p class="intro">
+      Tradiční maďarsko-český guláš z vepřového masa s kysaným zelím, smetanou a kořením. Výrazná a sytá chuť, která zahřeje a zasytí.
+    </p>
+    <img src="../../img/segedinsky-gulas.jpg" alt="Segedínský guláš" class="hlavni-obrazek" />
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="1" data-jednotka="velká cibule">1 velká cibule</span></li>
+          <li><span data-zaklad="4" data-jednotka="stroužky česneku">4 stroužky česneku</span></li>
+          <li>kousek sádla</li>
+          <li><span data-zaklad="500" data-jednotka="g vepřového masa">500 g vepřového masa (plec, kýta, krkovice)</span></li>
+          <li>kmín</li>
+          <li><span data-zaklad="150" data-jednotka="g smetany na vaření 12%">150 g smetany na vaření 12%</span></li>
+          <li>mletá paprika (sladká i pálivá)</li>
+          <li>1/2 chilli papričky (nemusí být)</li>
+          <li><span data-zaklad="500" data-jednotka="g kysaného zelí">500 g kysaného zelí</span></li>
+          <li>sůl</li>
+          <li>mletý pepř</li>
+          <li><span data-zaklad="2" data-jednotka="bobkové listy">2 bobkové listy</span></li>
+          <li>cukr</li>
+          <li><strong>Na zahuštění:</strong></li>
+          <li><span data-zaklad="2" data-jednotka="lžíce hladké mouky">2 lžíce hladké mouky</span></li>
+          <li>voda</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Cibuli a česnek oloupeme, cibuli nakrájíme nadrobno a česnek na kousky. Maso nakrájíme na kostky, osolíme a opepříme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Na sádle osmažíme cibuli dorůžova, přidáme maso a česnek a restujeme, dokud se maso nezatáhne.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Přidáme kmín a mletou papriku, krátce zpěníme a ihned podlijeme vodou, aby se paprika nespálila.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Přidáme zelí bez nálevu (část nálevu lze ponechat dle chuti), bobkový list a chilli papričku. Dusíme asi 30 minut.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>V troše vody rozmícháme mouku a za stálého míchání guláš zahustíme. Provaříme asi 20 minut, aby se mouka provařila.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Vmícháme smetanu, krátce povaříme a podle chuti dochutíme solí, pepřem a případně cukrem.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">7</span>
+          <div class="step-text">
+            <p>Podáváme s chlebem nebo houskovým knedlíkem.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

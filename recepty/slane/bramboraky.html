@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bramboráky – Recept</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <script defer src="../../script.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-flex">
+    <h1>Kuchtík – Česká a Slovenská kuchyně</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="../../index.html">Domů</a>
+  </nav>
+</header>
+
+<div class="recipe-container">
+  <div class="recipe-header">
+    <h1>Bramboráky</h1>
+    <p class="intro">
+      Tradiční české bramborové placky s česnekem, majoránkou a kmínem. Křupavé na povrchu, vláčné uvnitř – skvělá příloha i samostatný pokrm.
+    </p>
+    <img src="../../img/bramboraky.jpg" alt="Bramboráky" class="hlavni-obrazek" />
+  <button id="pridatDoHistorieBtn" style="
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">
+    Přidat do historie
+  </button>
+  </div>
+
+  <div class="recipe-columns">
+    <div class="ingredients-column">
+      <div class="ingredient-card">
+        <h2>Ingredience</h2>
+        <div class="portion-control">
+          <button id="minusBtn">−</button>
+          <span id="pocetPorci">4 porce</span>
+          <button id="plusBtn">+</button>
+        </div>
+        <ul class="ingredient-list">
+          <li><span data-zaklad="8" data-jednotka="velkých brambor">8 velkých brambor</span></li>
+          <li><span data-zaklad="6" data-jednotka="stroužků česneku">5–8 stroužků česneku (dle chuti)</span></li>
+          <li><span data-zaklad="50" data-jednotka="ml mléka">50 ml mléka</span></li>
+          <li>polohrubá mouka (dle potřeby)</li>
+          <li><span data-zaklad="1" data-jednotka="vejce">1 vejce</span></li>
+          <li>majoránka</li>
+          <li>drcený kmín</li>
+          <li>sůl</li>
+          <li>olej na smažení</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="steps-column">
+      <div class="steps-container">
+        <h2>Postup přípravy</h2>
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <div class="step-text">
+            <p>Česnek oloupeme a utřeme nebo prolisujeme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <div class="step-text">
+            <p>Brambory oloupeme a nastrouháme najemno. Pokud pustí hodně vody, část slijeme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <div class="step-text">
+            <p>Do brambor přidáme utřený česnek, vejce a mléko. Promícháme.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <div class="step-text">
+            <p>Dochutíme majoránkou, drceným kmínem a solí. Pokud je směs řídká, přidáme trochu polohrubé mouky.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <div class="step-text">
+            <p>Na pánvi s rozehřátým olejem tvoříme placky a smažíme z obou stran dozlatova.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-number">6</span>
+          <div class="step-text">
+            <p>Hotové bramboráky necháme okapat na papírové utěrce. Podáváme teplé, samotné nebo jako přílohu.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
