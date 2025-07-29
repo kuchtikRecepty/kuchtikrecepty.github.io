@@ -29,7 +29,7 @@
   <label><input type="radio" name="typ-jidla" value="vse" checked> Vše</label>
   <label><input type="radio" name="typ-jidla" value="polevka"> Polévky</label>
   <label><input type="radio" name="typ-jidla" value="slane-jidla"> Slané</label>
-  <label><input type="radio" name="typ-jidla" value="sladka-jidla"> Sladké</label>
+  <label><input type="radio" name="typ-jidla" value="sladke-jidla"> Sladké</label>
     <label><input type="radio" name="typ-jidla" value="salaty"> Saláty</label>
   <label><input type="radio" name="typ-jidla" value="dezerty"> Dezerty</label>
   <label><input type="radio" name="typ-jidla" value="mama"> Mama speciál</label>
@@ -99,6 +99,12 @@
 <label><input type="checkbox" class="filtr-surovina" value="majoneza">Majonéza</label>
 
 </div>
+<div style="margin-top: 20px;">
+  <button id="resetFiltruBtn" style="padding: 10px 20px; font-size: 1rem; background-color: var(--medium); color: white; border: none; border-radius: 8px; cursor: pointer;">
+    Vymazat filtry
+  </button>
+</div>
+
 </div>
 
 
@@ -278,7 +284,7 @@
   <p class="popis-receptu">Silný vývar s domácími nudlemi.</p>
 </div>
 
-<div class="recept-karta" data-kategorie="polevka" data-suroviny="zelenina parek brambory repa">
+<div class="recept-karta" data-kategorie="polevka" data-suroviny="zelenina parek brambory repa mama">
   <div class="img-wrapper">
     <img src="img/borscht.jpg" alt="Borscht">
     <div class="nazev-receptu">
@@ -752,7 +758,7 @@
   <div class="img-wrapper">
     <img src="img/povidla.jpg" alt="Povidlová omáčka">
     <div class="nazev-receptu">
-      <h2><a href="recepty/sladke/povidlova.html">Povidlová omáčka s uzeným masem</a></h2>
+      <h2><a href="recepty/slane/povidlova.html">Povidlová omáčka</a></h2>
     </div>
   </div>
   <p class="popis-receptu">S uzeným masem a knedlíkem.</p>
@@ -1181,6 +1187,28 @@
       vysledekBox.textContent = "Žádný recept neodpovídá filtrům.";
     }
   });
+
+  const resetBtn = document.getElementById("resetFiltruBtn");
+
+  resetBtn?.addEventListener("click", () => {
+    // Nastav zpět "typ jídla" na "vše"
+    const typRadio = document.querySelectorAll('input[name="typ-jidla"]');
+    typRadio.forEach(radio => {
+      radio.checked = (radio.value === "vse");
+    });
+
+    // Odškrtni všechny checkboxy
+    checkboxes.forEach(cb => cb.checked = false);
+
+    // Vymaž text ve vyhledávání (pokud chceš zachovat, tento řádek smaž)
+    if (searchInput) searchInput.value = '';
+
+    // Znovu spusť filtrování
+    filtrujRecepty();
+  });
+
+
+
 });</script>
 
   <footer>
